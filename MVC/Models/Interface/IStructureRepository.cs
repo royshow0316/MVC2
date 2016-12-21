@@ -8,11 +8,11 @@ namespace MVC.Models.Interface
 {
     public interface IStructureRepository : IDisposable
     {
-        void Create(Structure instance);
+        void Create(Structure entity);
 
-        void Update(Structure instance);
+        void Update(Structure entity);
 
-        void Delete(Structure instance);
+        void Delete(Structure entity);
 
         Structure Get(Guid projectId);
 
