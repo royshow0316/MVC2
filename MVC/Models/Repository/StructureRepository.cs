@@ -20,41 +20,41 @@ namespace MVC.Models.Repository
             this.Context = new ApplicationDbContext();
         }
 
-        public void Create(Structure instance)
+        public void Create(Structure entity)
         {
-            if (instance == null)
+            if (entity == null)
             {
-                throw new ArgumentNullException("instance");
+                throw new ArgumentNullException("entity");
             }
             else
             {
-                Context.Structure.Add(instance);
+                Context.Structure.Add(entity);
                 this.SaveChanges();
             }
         }
 
-        public void Update(Structure instance)
+        public void Update(Structure entity)
         {
-            if (instance == null)
+            if (entity == null)
             {
-                throw new ArgumentNullException("instance");
+                throw new ArgumentNullException("entity");
             }
             else
             {
-                Context.Entry(instance).State = EntityState.Modified;
+                Context.Entry(entity).State = EntityState.Modified;
                 this.SaveChanges();
             }
         }
 
-        public void Delete(Structure instance)
+        public void Delete(Structure entity)
         {
-            if (instance == null)
+            if (entity == null)
             {
-                throw new ArgumentNullException("instance");
+                throw new ArgumentNullException("entity");
             }
             else
             {
-                Context.Entry(instance).State = EntityState.Deleted;
+                Context.Entry(entity).State = EntityState.Deleted;
                 this.SaveChanges();
             }
         }
